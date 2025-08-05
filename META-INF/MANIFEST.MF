@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+TweakOrder: 0
+MixinConfigs: mixins.crosssine.json
+ModSide: CLIENT
+FMLCorePluginContainsFMLMod: true
+FMLAT: crosssine_at.cfg
+TweakClass: org.spongepowered.asm.launch.MixinTweaker
+ForceLoadAsMod: true
+FMLCorePlugin: net.ccbluex.liquidbounce.injection.forge.TransformerLoade
+ r
+

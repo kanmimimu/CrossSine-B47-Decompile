@@ -1,0 +1,1 @@
+{"id":"viaaprilfools","name":"ViaAprilFools","version":"${version}","description":"ViaVersion addon to add support for some notable Minecraft snapshots","url":"https://viaversion.com/aprilfools","authors":["RK_01","FlorianMichael/EnZaXD"],"dependencies":[{"id":"viaversion","optional":false},{"id":"viabackwards","optional":false}],"main":"net.raphimc.viaaprilfools.VelocityPlugin"}

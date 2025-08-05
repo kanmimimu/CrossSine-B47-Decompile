@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "viaaprilfools",
+  "name": "ViaAprilFools",
+  "version": "3.0.2-SNAPSHOT",
+  "description": "ViaVersion addon to add support for some notable Minecraft snapshots",
+  "license": "GPL-3.0",
+  "contact": {
+    "homepage": "https://viaversion.com/aprilfools",
+    "issues": "https://github.com/ViaVersion/ViaAprilFools/issues",
+    "sources": "https://github.com/ViaVersion/ViaAprilFools"
+  },
+  "icon": "assets/viaaprilfools/textures/icon.png",
+  "environment": "*",
+  "authors": [
+    "RK_01",
+    "FlorianMichael/EnZaXD"
+  ],
+  "entrypoints": {
+    "viafabric:via_api_initialized": [
+      "net.raphimc.viaaprilfools.ViaFabricAddon"
+    ]
+  },
+  "depends": {
+    "viafabric": ">=0.4.14",
+    "viabackwards": ">=5.0.4-SNAPSHOT"
+  },
+  "custom": {
+    "modmenu:api": true,
+    "modmenu": {
+      "badges": [ "library" ],
+      "parent": "viafabric"
+    }
+  }
+}

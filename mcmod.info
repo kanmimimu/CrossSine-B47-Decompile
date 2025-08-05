@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "crosssine",
+    "name": "GamingTable",
+    "description": "Minecraft 1.8 Utility mod",
+    "version": "b41",
+    "mcversion": "1.8.9",
+    "url": "https://crosssine.github.io",
+    "updateUrl": "",
+    "authorList": ["shxp3"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

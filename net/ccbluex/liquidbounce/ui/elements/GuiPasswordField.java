@@ -1,0 +1,37 @@
+package net.ccbluex.liquidbounce.ui.elements;
+
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.gui.GuiTextField;
+import org.jetbrains.annotations.NotNull;
+
+@Metadata(
+   mv = {1, 6, 0},
+   k = 1,
+   xi = 48,
+   d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\u0018\u00002\u00020\u0001B5\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0003\u0012\u0006\u0010\u0007\u001a\u00020\u0003\u0012\u0006\u0010\b\u001a\u00020\u0003\u0012\u0006\u0010\t\u001a\u00020\u0003¢\u0006\u0002\u0010\nJ\b\u0010\u000b\u001a\u00020\fH\u0016¨\u0006\r"},
+   d2 = {"Lnet/ccbluex/liquidbounce/ui/elements/GuiPasswordField;", "Lnet/minecraft/client/gui/GuiTextField;", "componentId", "", "fontrendererObj", "Lnet/minecraft/client/gui/FontRenderer;", "x", "y", "par5Width", "par6Height", "(ILnet/minecraft/client/gui/FontRenderer;IIII)V", "drawTextBox", "", "CrossSine"}
+)
+public final class GuiPasswordField extends GuiTextField {
+   public GuiPasswordField(int componentId, @NotNull FontRenderer fontrendererObj, int x, int y, int par5Width, int par6Height) {
+      Intrinsics.checkNotNullParameter(fontrendererObj, "fontrendererObj");
+      super(componentId, fontrendererObj, x, y, par5Width, par6Height);
+   }
+
+   public void func_146194_f() {
+      String realText = this.func_146179_b();
+      StringBuilder stringBuilder = new StringBuilder();
+      int var3 = 0;
+      int var4 = this.func_146179_b().length();
+
+      while(var3 < var4) {
+         ++var3;
+         stringBuilder.append('*');
+      }
+
+      this.func_146180_a(stringBuilder.toString());
+      super.func_146194_f();
+      this.func_146180_a(realText);
+   }
+}

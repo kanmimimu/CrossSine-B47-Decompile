@@ -1,0 +1,31 @@
+package com.viaversion.viaversion.bukkit.platform;
+
+import com.viaversion.viaversion.ViaAPIBase;
+import com.viaversion.viaversion.ViaVersionPlugin;
+import com.viaversion.viaversion.api.Via;
+import com.viaversion.viaversion.api.connection.UserConnection;
+import com.viaversion.viaversion.api.protocol.version.ProtocolVersion;
+import io.netty.buffer.ByteBuf;
+import java.util.UUID;
+import org.bukkit.entity.Player;
+
+public class BukkitViaAPI extends ViaAPIBase {
+   private final ViaVersionPlugin plugin;
+
+   public BukkitViaAPI(ViaVersionPlugin plugin) {
+      this.plugin = plugin;
+   }
+
+   public ProtocolVersion getPlayerProtocolVersion(Player player) {
+      return this.getPlayerProtocolVersion(player.getUniqueId());
+   }
+
+   public ProtocolVersion getPlayerProtocolVersion(UUID uuid) {
+      UserConnection connection = Via.getManager().getConnectionManager().getConnectedClient(uuid);
+      return connection != null ? connection.getProtocolInfo().protocolVersion() : ProtocolVersion.unknown;
+   }
+
+   public void sendRawPacket(Player player, ByteBuf packet) throws IllegalArgumentException {
+      this.sendRawPacket((UUID)player.getUniqueId(), packet);
+   }
+}
